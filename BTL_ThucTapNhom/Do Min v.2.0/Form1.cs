@@ -195,7 +195,8 @@ namespace Do_Min_v._2._0
         public void loang()
         {
 
-            int cot = Convert.ToInt32(Hangdoi.Pop().ToString());
+          
+
 
         }
         #endregion
@@ -315,7 +316,7 @@ namespace Do_Min_v._2._0
         public void xulysukienco(int dong, int cot, Graphics g, int x, int y)
         {
             if (kiemtraomo[dong, cot] == 0)
-            {
+             
                 if (co[dong, cot] == -2)
                 {
 
@@ -334,7 +335,7 @@ namespace Do_Min_v._2._0
         }
         #endregion
         #region Xử lí sự kiện click chuột
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        private void Panel1_MouseDown(object sender, MouseEventArgs e)
         {                       
             timer1.Enabled = true;                          
             if (e.Button == MouseButtons.Right)
