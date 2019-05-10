@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BTL_ThucTapNhom_DoMin
+namespace Do_Min_v._2._0
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace BTL_ThucTapNhom_DoMin
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+           Application.Run(new Form1());
         }
     }
 }
