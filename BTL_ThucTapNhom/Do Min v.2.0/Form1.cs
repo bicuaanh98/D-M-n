@@ -195,13 +195,8 @@ namespace Do_Min_v._2._0
         public void loang()
         {
 
+            int cot = Convert.ToInt32(Hangdoi.Pop().ToString());
 
-            if (Hangdoi.Count != 0)
-            {
-                int cot = Convert.ToInt32(Hangdoi.Pop().ToString());
-                int dong = Convert.ToInt32(Hangdoi.Pop().ToString());
-                mootrong(dong, cot, grs, dong * 25, cot * 25);
-            }
         }
         #endregion
         #region Mở ô số
@@ -412,7 +407,7 @@ namespace Do_Min_v._2._0
         }
         private void thôngTinToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(@"Bản quyền thuộc về nhóm 14 ^^ ");
+            MessageBox.Show(@"Bản quyền thuộc về nhóm 14 ^^ "); 
         }
         #region Xử lí điểm cao
         private void hướngDẫnChơiToolStripMenuItem_Click(object sender, EventArgs e)
