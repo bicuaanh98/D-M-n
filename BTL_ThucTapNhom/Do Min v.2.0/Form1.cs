@@ -328,7 +328,15 @@ namespace Do_Min_v._2._0
                     co[dong, cot] = -1;
                     lblco.Text = (Convert.ToInt32(lblco.Text) - 1).ToString();
                 }
+                else
+                {
+                    grs.DrawImage(Img_cell, x, y);
+                    co[dong, cot] = -2;
+                    lblco.Text = (Convert.ToInt32(lblco.Text) + 1).ToString();
+                }
+                kiemtrathang();
             }
+        }
         #endregion
         #region Xử lí sự kiện click chuột
         private void panel1_MouseDown(object sender, MouseEventArgs e)
