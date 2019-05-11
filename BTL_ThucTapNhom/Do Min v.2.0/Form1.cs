@@ -340,8 +340,8 @@ namespace Do_Min_v._2._0
         #endregion
         #region Xử lí sự kiện click chuột
         private void panel1_MouseDown(object sender, MouseEventArgs e)
-        {                       
-            timer1.Enabled = true;                          
+        {
+            timer1.Enabled = true;
             if (e.Button == MouseButtons.Right)
             {
                 int dong = e.X / 25;
@@ -349,14 +349,6 @@ namespace Do_Min_v._2._0
                 int x = dong * 25;
                 int y = cot * 25;
                 xulysukienco(dong, cot, grs, x, y);
-            }
-            else
-            {
-                int dong = e.X / 25;
-                int cot = e.Y / 25;
-                int x = dong * 25;
-                int y = cot * 25;
-                xulysukien(dong, cot, grs, x, y);
             }
         }
         #endregion
