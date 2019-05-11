@@ -194,8 +194,10 @@ namespace Do_Min_v._2._0
 
         public void loang()
         {
+            if (Hangdoi.Count != 0) ; 
 
-          
+
+
 
 
         }
