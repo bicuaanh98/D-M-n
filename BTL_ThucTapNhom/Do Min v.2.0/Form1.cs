@@ -319,8 +319,16 @@ namespace Do_Min_v._2._0
         #region Xử lí sự kiện click chuột phải
         public void xulysukienco(int dong, int cot, Graphics g, int x, int y)
         {
-            
-        }
+            if (kiemtraomo[dong, cot] == 0)
+            {
+                if (co[dong, cot] == -2)
+                {
+
+                    grs.DrawImage(Img_co, x, y);
+                    co[dong, cot] = -1;
+                    lblco.Text = (Convert.ToInt32(lblco.Text) - 1).ToString();
+                }
+            }
         #endregion
         #region Xử lí sự kiện click chuột
         private void panel1_MouseDown(object sender, MouseEventArgs e)
