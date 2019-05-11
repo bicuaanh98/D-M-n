@@ -50,73 +50,7 @@ namespace Do_Min_v._2._0
         #region khởi tạo gán giá trị
         public void khoitaomangco(int soDong, int soCot)
         {
-            for (int i = 0; i < soDong; i++)
-            {
-                for (int j = 0; j < soCot; j++)
-                {
-                    co[i, j] = -2;
-
-                }
-            }
-
-            for (int i = 0; i < soDong; i++)
-            {
-                for (int j = 0; j < soCot; j++)
-                {
-                    kiemtraomo[i, j] = 0;
-
-                }
-            }
-        }
-        public void khoitaomangmoi(int soDong, int soCot, int soBom)
-        {
-            for (int i = 0; i < soDong; i++)
-            {
-                for (int j = 0; j < soCot; j++)
-                {
-                    mainboard[i, j] = 0;
-
-                }
-            }
-
-            Random random = new Random();
-
-            int randDong = 0;
-            int randCot;
-            for (int i = 0; i < soBom; )
-            {
-                randDong = random.Next(0,soDong - 1);
-                randCot = random.Next(0,soCot - 1);
-                if (mainboard[randDong, randCot] != -1)
-                {
-                    mainboard[randDong, randCot] = -1; i++;
-                }
-            }
-            for (int i = 0; i < soDong; i++)
-            {
-                for (int j = 0; j < soCot; j++)
-                {
-                    if (mainboard[i, j] == -1)
-                    {
-                        if (j - 1 >= 0 && mainboard[i, j - 1] != -1) mainboard[i, j - 1]++;
-                        if (j + 1 < soCot && mainboard[i, j + 1] != -1) mainboard[i, j + 1]++;
-
-                        if (i - 1 >= 0)
-                        {
-                            if (mainboard[i - 1, j] != -1) mainboard[i - 1, j]++;
-                            if (j - 1 >= 0 && mainboard[i - 1, j - 1] != -1) mainboard[i - 1, j - 1]++;
-                            if (j + 1 < soCot && mainboard[i - 1, j + 1] != -1) mainboard[i - 1, j + 1]++;
-                        }
-
-                        if (i + 1 < soDong)
-                        {
-                            if (mainboard[i + 1, j] != -1) mainboard[i + 1, j]++;
-                            if (j - 1 >= 0 && mainboard[i + 1, j - 1] != -1) mainboard[i + 1, j - 1]++;
-                            if (j + 1 < soCot && mainboard[i + 1, j + 1] != -1) mainboard[i + 1, j + 1]++;
-                        }
-                    }
-                }
-            }
+       
         }
         #endregion
         
