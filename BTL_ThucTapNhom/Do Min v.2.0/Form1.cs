@@ -194,7 +194,11 @@ namespace Do_Min_v._2._0
 
         public void loang()
         {
-            if (Hangdoi.Count != 0) ; 
+            if (Hangdoi.Count != 0)
+            {
+                int cot = Convert.ToInt32(Hangdoi.Pop.ToString());
+                int dong = Convert.ToInt32(Hangdoi.Pop.ToString());
+            }
 
 
 
