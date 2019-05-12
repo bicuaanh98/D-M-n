@@ -324,7 +324,7 @@ namespace Do_Min_v._2._0
                 if (co[dong, cot] == -2)
                 {
 
-                    
+                    grs.DrawImage(Img_co, x, y);
                     co[dong, cot] = -1;
                     lblco.Text = (Convert.ToInt32(lblco.Text) - 1).ToString();
                 }
