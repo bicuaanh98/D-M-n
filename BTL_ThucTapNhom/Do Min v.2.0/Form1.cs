@@ -236,22 +236,39 @@ namespace Do_Min_v._2._0
         public void hienbom()
         {
 
-            for (int i = 0; i < Convert.ToInt32(nudrow.Text); i++)
+            
                 for (int i2 = 0; i2 < Convert.ToInt32(nudcol.Text); i2++)
                 {
-                    if (mainboard[i, i2] == -1)
-                    {
-                        grs.DrawImage(Img_bom, i * 25, i2 * 25);
-                        if (co[i, i2] == -1)
-                            grs.DrawImage(Img_bom_X, i * 25, i2 * 25);
-                    }
+
                 }
         }
         #endregion
         #region Kiểm tra điều kiện thắng 
         public void kiemtrathang()
         {
-            //đã xóa    
+            int youwin = 0;
+            for (int i = 0; i < Convert.ToInt32(nudrow.Text); i++)
+            {
+                for (int j = 0; j < Convert.ToInt32(nudcol.Text); j++)
+                {
+                    if (mainboard[i, j] == co[i, j])
+                    {
+                        youwin++;
+
+                    }
+                    if (youwin == Convert.ToInt32(nudbom.Text) && lblco.Text == "0")
+                    {
+                        timer1.Enabled = false;
+                        MessageBox.Show("Xin chúc mừng bạn đã chiến thắng ^^");
+                        Form2 f2 = new Form2();
+                        f2.Show();
+                        j = Convert.ToInt32(nudrow.Text);
+                        i = Convert.ToInt32(nudcol.Text);
+                    }
+
+                }
+
+            }
         }
         #endregion
         #region Xử lí sự kiện click chuột trái
