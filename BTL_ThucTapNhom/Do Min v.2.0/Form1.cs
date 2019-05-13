@@ -235,11 +235,17 @@ namespace Do_Min_v._2._0
         #region Hiện bom khi thua
         public void hienbom()
         {
-
-            
+            // SỬ LÍ HIỆN BOM KHI THUA
+            //
+            for (int i = 0; i < Convert.ToInt32(nudrow.Text); i++)
                 for (int i2 = 0; i2 < Convert.ToInt32(nudcol.Text); i2++)
                 {
-
+                    if (mainboard[i, i2] == -1)
+                    {
+                        grs.DrawImage(Img_bom, i * 25, i2 * 25);
+                        if (co[i, i2] == -1)
+                            grs.DrawImage(Img_bom_X, i * 25, i2 * 25);
+                    }
                 }
         }
         #endregion
