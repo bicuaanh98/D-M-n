@@ -130,7 +130,7 @@ namespace Do_Min_v._2._0
             {
                 if (mainboard[dong, cot + 1] == 0 && kiemtraomo[dong, cot + 1] == 0)
                 {
-                    
+                    kiemtraomo[dong, cot + 1] = 1;
                 }
                 else
                 {
