@@ -220,8 +220,12 @@ namespace Do_Min_v._2._0
                     case 8: grs.DrawImage(Img_poit8, x, y); break;
 
                 }
-                #endregion
-                private void panel1_Paint(object sender, PaintEventArgs e)
+
+                kiemtraomo[dong, cot] = 1;
+            }
+        }
+        #endregion
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
             vetoado();
         }
