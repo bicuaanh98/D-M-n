@@ -141,50 +141,7 @@ namespace Do_Min_v._2._0
                 }
             }
             // ô ở dưới
-            if (cot != 0 && co[dong, cot - 1] == -2)
-            {
-                if (mainboard[dong, cot - 1] == 0 && kiemtraomo[dong, cot - 1] == 0)
-                {
-                    grs.DrawImage(Img_poit9, dong * 25, (cot - 1) * 25);
-                    Hangdoi.Push(dong);
-                    Hangdoi.Push(cot - 1);
-                    kiemtraomo[dong, cot - 1] = 1;
-                }
-                else
-                {
-                    moochuaso(dong, cot - 1, (dong) * 25, (cot - 1) * 25);
-                }
-            }
-            // ô ở bên phải
-
-            if (dong != Convert.ToInt32(nudrow.Text.ToString())-1 && co[dong + 1, cot] == -2)
-            {
-                if (mainboard[dong + 1, cot] == 0 && kiemtraomo[dong + 1, cot] == 0)
-                {
-                    kiemtraomo[dong + 1, cot] = 1;
-                    grs.DrawImage(Img_poit9, (dong + 1) * 25, (cot) * 25);
-                    Hangdoi.Push(dong + 1);
-                    Hangdoi.Push(cot);
-                }
-                else
-                {
-                    moochuaso(dong + 1, cot, (dong + 1) * 25, (cot) * 25);
-                }
-            }
-            // ô bên trái
-            if (dong != 0 && co[dong - 1, cot] == -2)
-            {
-                if (mainboard[dong - 1, cot] == 0 && kiemtraomo[dong - 1, cot] == 0)
-                {
-                    kiemtraomo[dong - 1, cot] = 1;
-                    grs.DrawImage(Img_poit9, (dong - 1) * 25, (cot) * 25);
-                    Hangdoi.Push(dong - 1);
-                    Hangdoi.Push(cot);
-                }
-                else
-                {
-                    moochuaso(dong - 1, cot, (dong - 1) * 25, (cot) * 25);
-                }
+            
             }
 
             // loang
