@@ -259,12 +259,18 @@ namespace Do_Min_v._2._0
                 {
                     if (mainboard[i, j] == co[i, j])
                     {
-                        youwin++;
+                        youwin++; // Ba đã thăng trò chơi
 
                     }
                     if (youwin == Convert.ToInt32(nudbom.Text) && lblco.Text == "0")
-                    {
-
+                    { 
+                       
+                        timer1.Enabled = false;
+                        MessageBox.Show("Xin chúc mừng bạn đã chiến thắng ^^");
+                        Form2 f2 = new Form2();
+                        f2.Show();
+                        j = Convert.ToInt32(nudrow.Text);
+                        i = Convert.ToInt32(nudcol.Text);
                     }
 
                 }
