@@ -202,28 +202,7 @@ namespace Do_Min_v._2._0
         }
         #endregion
         #region Mở ô số
-        public void moochuaso(int dong, int cot, int x, int y)
-        {
-
-            if (co[dong, cot] == -2)
-            {
-
-                switch (mainboard[dong, cot])
-                {
-
-                    case 1: grs.DrawImage(Img_poit1, x, y); break;
-                    case 2: grs.DrawImage(Img_poit2, x, y); break;
-                    case 3: grs.DrawImage(Img_poit3, x, y); break;
-                    case 4: grs.DrawImage(Img_poit4, x, y); break;
-                    case 5: grs.DrawImage(Img_poit5, x, y); break;
-                    case 6: grs.DrawImage(Img_poit6, x, y); break;
-                    case 7: grs.DrawImage(Img_poit7, x, y); break;
-                    case 8: grs.DrawImage(Img_poit8, x, y); break;
-
-                }
-                kiemtraomo[dong, cot] = 1;
-            }
-        }
+        
         #endregion
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
