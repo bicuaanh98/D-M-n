@@ -171,7 +171,16 @@ namespace Do_Min_v._2._0
                 }
             }
             // ô bên trái
-        }
+            if (dong != 0 && co[dong - 1, cot] == -2)
+            {
+                if (mainboard[dong - 1, cot] == 0 && kiemtraomo[dong - 1, cot] == 0)
+                {
+                    kiemtraomo[dong - 1, cot] = 1;
+                    grs.DrawImage(Img_poit9, (dong - 1) * 25, (cot) * 25);
+                    Hangdoi.Push(dong - 1);
+                    Hangdoi.Push(cot);
+                }
+            }
 
         // loang
         loang();
