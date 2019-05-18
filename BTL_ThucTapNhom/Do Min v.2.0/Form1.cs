@@ -202,9 +202,16 @@ namespace Do_Min_v._2._0
         }
         #endregion
         #region Mở ô số
-        
+        public void moochuaso(int dong, int cot, int x, int y)
+        {
+
+            if (co[dong, cot] == -2)
+            {
+
+                switch (mainboard[dong, cot])
+                {
         #endregion
-        private void panel1_Paint(object sender, PaintEventArgs e)
+                private void panel1_Paint(object sender, PaintEventArgs e)
         {
             vetoado();
         }
