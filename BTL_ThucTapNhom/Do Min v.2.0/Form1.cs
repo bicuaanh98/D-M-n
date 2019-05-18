@@ -210,7 +210,17 @@ namespace Do_Min_v._2._0
 
                 switch (mainboard[dong, cot])
                 {
-        #endregion
+                    case 1: grs.DrawImage(Img_poit1, x, y); break;
+                    case 2: grs.DrawImage(Img_poit2, x, y); break;
+                    case 3: grs.DrawImage(Img_poit3, x, y); break;
+                    case 4: grs.DrawImage(Img_poit4, x, y); break;
+                    case 5: grs.DrawImage(Img_poit5, x, y); break;
+                    case 6: grs.DrawImage(Img_poit6, x, y); break;
+                    case 7: grs.DrawImage(Img_poit7, x, y); break;
+                    case 8: grs.DrawImage(Img_poit8, x, y); break;
+
+                }
+                #endregion
                 private void panel1_Paint(object sender, PaintEventArgs e)
         {
             vetoado();
