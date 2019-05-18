@@ -145,7 +145,12 @@ namespace Do_Min_v._2._0
             {
                 if (mainboard[dong, cot - 1] == 0 && kiemtraomo[dong, cot - 1] == 0)
                 {
+                    grs.DrawImage(Img_poit9, dong * 25, (cot - 1) * 25);
+                    Hangdoi.Push(dong);
+                    Hangdoi.Push(cot - 1);
+                    kiemtraomo[dong, cot - 1] = 1;
                 }
+            }
 
             // loang
             loang();
