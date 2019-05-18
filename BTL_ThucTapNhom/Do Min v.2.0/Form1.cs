@@ -136,7 +136,9 @@ namespace Do_Min_v._2._0
                     Hangdoi.Push(cot + 1);
                 }
                 else
-                
+                {
+                    moochuaso(dong, cot + 1, (dong) * 25, (cot + 1) * 25);
+                }
             }
             // ô ở dưới
             if (cot != 0 && co[dong, cot - 1] == -2)
