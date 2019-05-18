@@ -141,8 +141,11 @@ namespace Do_Min_v._2._0
                 }
             }
             // ô ở dưới
-            
-            }
+            if (cot != 0 && co[dong, cot - 1] == -2)
+            {
+                if (mainboard[dong, cot - 1] == 0 && kiemtraomo[dong, cot - 1] == 0)
+                {
+                }
 
             // loang
             loang();
