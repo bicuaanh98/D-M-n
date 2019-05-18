@@ -165,7 +165,13 @@ namespace Do_Min_v._2._0
                     Hangdoi.Push(dong + 1);
                     Hangdoi.Push(cot);
                 }
+                else
+                {
+                    moochuaso(dong + 1, cot, (dong + 1) * 25, (cot) * 25);
+                }
             }
+            // ô bên trái
+        }
 
         // loang
         loang();
