@@ -150,10 +150,16 @@ namespace Do_Min_v._2._0
                     Hangdoi.Push(cot - 1);
                     kiemtraomo[dong, cot - 1] = 1;
                 }
+                else
+                {
+                    moochuaso(dong, cot - 1, (dong) * 25, (cot - 1) * 25);
+                }
             }
+            // ô ở bên phải
+        }
 
-            // loang
-            loang();
+        // loang
+        loang();
 
         }
 
