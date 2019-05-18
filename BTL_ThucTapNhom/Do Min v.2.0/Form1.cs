@@ -188,7 +188,7 @@ namespace Do_Min_v._2._0
 
         // loang
         loang();
-
+            
         }
 
         public void loang()
@@ -197,7 +197,7 @@ namespace Do_Min_v._2._0
             {
                 int cot = Convert.ToInt32(Hangdoi.Pop().ToString());
                 int dong = Convert.ToInt32(Hangdoi.Pop().ToString());
-                mootrong = ( dong,cot,grs,dong*25,cot * 25);
+                mootrong ( dong,cot,grs,dong*25,cot * 25);
             }
         }
         #endregion
