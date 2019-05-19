@@ -50,73 +50,7 @@ namespace Do_Min_v._2._0
         #region khởi tạo gán giá trị
         public void khoitaomangco(int soDong, int soCot)
         {
-            for (int i = 0; i < soDong; i++)
-            {
-                for (int j = 0; j < soCot; j++)
-                {
-                    co[i, j] = -2;
-
-                }
-            }
-
-            for (int i = 0; i < soDong; i++)
-            {
-                for (int j = 0; j < soCot; j++)
-                {
-                    kiemtraomo[i, j] = 0;
-
-                }
-            }
-        }
-        public void khoitaomangmoi(int soDong, int soCot, int soBom)
-        {
-            for (int i = 0; i < soDong; i++)
-            {
-                for (int j = 0; j < soCot; j++)
-                {
-                    mainboard[i, j] = 0;
-
-                }
-            }
-
-            Random random = new Random();
-
-            int randDong = 0;
-            int randCot;
-            for (int i = 0; i < soBom; )
-            {
-                randDong = random.Next(0,soDong - 1);
-                randCot = random.Next(0,soCot - 1);
-                if (mainboard[randDong, randCot] != -1)
-                {
-                    mainboard[randDong, randCot] = -1; i++;
-                }
-            }
-            for (int i = 0; i < soDong; i++)
-            {
-                for (int j = 0; j < soCot; j++)
-                {
-                    if (mainboard[i, j] == -1)
-                    {
-                        if (j - 1 >= 0 && mainboard[i, j - 1] != -1) mainboard[i, j - 1]++;
-                        if (j + 1 < soCot && mainboard[i, j + 1] != -1) mainboard[i, j + 1]++;
-
-                        if (i - 1 >= 0)
-                        {
-                            if (mainboard[i - 1, j] != -1) mainboard[i - 1, j]++;
-                            if (j - 1 >= 0 && mainboard[i - 1, j - 1] != -1) mainboard[i - 1, j - 1]++;
-                            if (j + 1 < soCot && mainboard[i - 1, j + 1] != -1) mainboard[i - 1, j + 1]++;
-                        }
-
-                        if (i + 1 < soDong)
-                        {
-                            if (mainboard[i + 1, j] != -1) mainboard[i + 1, j]++;
-                            if (j - 1 >= 0 && mainboard[i + 1, j - 1] != -1) mainboard[i + 1, j - 1]++;
-                            if (j + 1 < soCot && mainboard[i + 1, j + 1] != -1) mainboard[i + 1, j + 1]++;
-                        }
-                    }
-                }
-            }
+       
         }
         #endregion
         
@@ -232,15 +166,16 @@ namespace Do_Min_v._2._0
         #region Hiện bom khi thua
         public void hienbom()
         {
-
+            // SỬ LÍ HIỆN BOM KHI THUA
+            //
             for (int i = 0; i < Convert.ToInt32(nudrow.Text); i++)
                 for (int i2 = 0; i2 < Convert.ToInt32(nudcol.Text); i2++)
                 {
                     if (mainboard[i, i2] == -1)
                     {
                         grs.DrawImage(Img_bom, i * 25, i2 * 25);
-                        if (co[i, i2] == -1)
-                            grs.DrawImage(Img_bom_X, i * 25, i2 * 25);
+                        if (co[i, i2] == -1) // nếu thua tất cả các bom sẽ hiện ra
+                     
                     }
                 }
         }
@@ -255,15 +190,16 @@ namespace Do_Min_v._2._0
                 {
                     if (mainboard[i, j] == co[i, j])
                     {
-                        youwin++;
+                        youwin++; // Ba đã thăng trò chơi
 
                     }
                     if (youwin == Convert.ToInt32(nudbom.Text) && lblco.Text == "0")
-                    {
+                    { 
+                       
                         timer1.Enabled = false;
-                        MessageBox.Show("Xin chúc mừng bạn đã chiến thắng ^^");                     
-                            Form2 f2 = new Form2();
-                            f2.Show();
+                        MessageBox.Show("Xin chúc mừng bạn đã chiến thắng ^^");
+                        Form2 f2 = new Form2();
+                        f2.Show();
                         j = Convert.ToInt32(nudrow.Text);
                         i = Convert.ToInt32(nudcol.Text);
                     }
@@ -335,10 +271,10 @@ namespace Do_Min_v._2._0
             }
         }
         #endregion
-        #region Xử lí sự kiện click chuột
-        private void Panel1_MouseDown(object sender, MouseEventArgs e)
-        {                       
-            timer1.Enabled = true;                          
+        #region Xử lí sự kiện click chuột 
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            timer1.Enabled = true;
             if (e.Button == MouseButtons.Right)
             {
                 int dong = e.X / 25;
