@@ -91,10 +91,34 @@ namespace Do_Min_v._2._0
                     mainboard[randDong, randCot] = -1; i++;
                 }
             }
+            for (int i = 0; i < soDong; i++)
+            {
+                for (int j = 0; j < soCot; j++)
+                {
+                    if (mainboard[i, j] == -1)
+                    {
+                        if (j - 1 >= 0 && mainboard[i, j - 1] != -1) mainboard[i, j - 1]++;
+                        if (j + 1 < soCot && mainboard[i, j + 1] != -1) mainboard[i, j + 1]++;
+
+                        if (i - 1 >= 0)
+                        {
+                            if (mainboard[i - 1, j] != -1) mainboard[i - 1, j]++;
+                            if (j - 1 >= 0 && mainboard[i - 1, j - 1] != -1) mainboard[i - 1, j - 1]++;
+                            if (j + 1 < soCot && mainboard[i - 1, j + 1] != -1) mainboard[i - 1, j + 1]++;
+                        }
+
+                        if (i + 1 < soDong)
+                        {
+                            if (mainboard[i + 1, j] != -1) mainboard[i + 1, j]++;
+                            if (j - 1 >= 0 && mainboard[i + 1, j - 1] != -1) mainboard[i + 1, j - 1]++;
+                            if (j + 1 < soCot && mainboard[i + 1, j + 1] != -1) mainboard[i + 1, j + 1]++;
+                        }
+                    }
+                }
 
 
 
-
+            }
         }
         #endregion
 
