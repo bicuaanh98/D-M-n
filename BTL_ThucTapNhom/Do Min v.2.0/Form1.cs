@@ -78,6 +78,20 @@ namespace Do_Min_v._2._0
 
                 }
             }
+            Random random = new Random();
+
+            int randDong = 0;
+            int randCot;
+            for (int i = 0; i < soBom;)
+            {
+                randDong = random.Next(0, soDong - 1);
+                randCot = random.Next(0, soCot - 1);
+                if (mainboard[randDong, randCot] != -1)
+                {
+                    mainboard[randDong, randCot] = -1; i++;
+                }
+            }
+
 
 
 
