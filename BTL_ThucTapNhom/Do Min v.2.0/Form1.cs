@@ -340,8 +340,8 @@ namespace Do_Min_v._2._0
         #endregion
         #region Xử lí sự kiện click chuột
         private void panel1_MouseDown(object sender, MouseEventArgs e)
-        {                       
-            timer1.Enabled = true;                          
+        {
+            timer1.Enabled = true;
             if (e.Button == MouseButtons.Right)
             {
                 int dong = e.X / 25;
