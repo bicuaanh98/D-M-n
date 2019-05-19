@@ -90,7 +90,6 @@ namespace Do_Min_v._2._0
                 }
             }
             // ô ở bên phải
-
             if (dong != Convert.ToInt32(nudrow.Text.ToString())-1 && co[dong + 1, cot] == -2)
             {
                 if (mainboard[dong + 1, cot] == 0 && kiemtraomo[dong + 1, cot] == 0)
@@ -121,20 +120,18 @@ namespace Do_Min_v._2._0
                 }
             }
 
-            // loang
-            loang();
-
+        // loang
+        loang();
+            
         }
 
         public void loang()
         {
-
-
             if (Hangdoi.Count != 0)
             {
                 int cot = Convert.ToInt32(Hangdoi.Pop().ToString());
                 int dong = Convert.ToInt32(Hangdoi.Pop().ToString());
-                mootrong(dong, cot, grs, dong * 25, cot * 25);
+                mootrong ( dong,cot,grs,dong*25,cot * 25);
             }
         }
         #endregion
@@ -147,7 +144,6 @@ namespace Do_Min_v._2._0
 
                 switch (mainboard[dong, cot])
                 {
-
                     case 1: grs.DrawImage(Img_poit1, x, y); break;
                     case 2: grs.DrawImage(Img_poit2, x, y); break;
                     case 3: grs.DrawImage(Img_poit3, x, y); break;
@@ -158,6 +154,7 @@ namespace Do_Min_v._2._0
                     case 8: grs.DrawImage(Img_poit8, x, y); break;
 
                 }
+
                 kiemtraomo[dong, cot] = 1;
             }
         }
@@ -256,7 +253,7 @@ namespace Do_Min_v._2._0
         public void xulysukienco(int dong, int cot, Graphics g, int x, int y)
         {
             if (kiemtraomo[dong, cot] == 0)
-            {
+             
                 if (co[dong, cot] == -2)
                 {
 
@@ -274,7 +271,7 @@ namespace Do_Min_v._2._0
             }
         }
         #endregion
-        #region Xử lí sự kiện click chuột
+        #region Xử lí sự kiện click chuột 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
             timer1.Enabled = true;
@@ -348,7 +345,7 @@ namespace Do_Min_v._2._0
         }
         private void thôngTinToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(@"Bản quyền thuộc về nhóm 14 ^^ ");
+            MessageBox.Show(@"Bản quyền thuộc về nhóm 14 ^^ "); 
         }
         #region Xử lí điểm cao
         private void hướngDẫnChơiToolStripMenuItem_Click(object sender, EventArgs e)
