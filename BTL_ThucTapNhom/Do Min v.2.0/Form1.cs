@@ -68,9 +68,22 @@ namespace Do_Min_v._2._0
                 }
             }
         }
-    }
+        public void khoitaomangmoi(int soDong, int soCot, int soBom)
+        {
+            for (int i = 0; i < soDong; i++)
+            {
+                for (int j = 0; j < soCot; j++)
+                {
+                    mainboard[i, j] = 0;
+
+                }
+            }
+
+
+
+        }
         #endregion
-        
+
         #region Mở ô tróng
         public void mootrong(int dong, int cot, Graphics g, int x, int y)
         {
