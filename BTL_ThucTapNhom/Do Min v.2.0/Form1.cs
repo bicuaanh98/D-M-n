@@ -50,8 +50,25 @@ namespace Do_Min_v._2._0
         #region khởi tạo gán giá trị
         public void khoitaomangco(int soDong, int soCot)
         {
-       
+            for (int i = 0; i < soDong; i++)
+            {
+                for (int j = 0; j < soCot; j++)
+                {
+                    co[i, j] = -2;
+
+                }
+            }
+
+            for (int i = 0; i < soDong; i++)
+            {
+                for (int j = 0; j < soCot; j++)
+                {
+                    kiemtraomo[i, j] = 0;
+
+                }
+            }
         }
+    }
         #endregion
         
         #region Mở ô tróng
