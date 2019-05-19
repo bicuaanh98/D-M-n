@@ -243,8 +243,8 @@ namespace Do_Min_v._2._0
                     if (mainboard[i, i2] == -1)
                     {
                         grs.DrawImage(Img_bom, i * 25, i2 * 25);
-                   
-                            grs.DrawImage(Img_bom_X, i * 25, i2 * 25);
+                        if (co[i, i2] == -1) // nếu thua tất cả các bom sẽ hiện ra
+                     
                     }
                 }
         }
